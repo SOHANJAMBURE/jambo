@@ -1,0 +1,33 @@
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<div id="root"></div>
+<script type="text/babel">
+    function Product(xyz) {
+        console.log(xyz);
+        return (<div class="col-xl-3">
+           <img src={xyz.path} alt="" class="img-fluid"/>
+           <h2>{xyz.price}</h2>
+           <p>{xyz.name}</p>
+           <p><button>add to cart</button></p>
+        </div>)
+    }
+    var record = (
+        <div class="container">
+            <div class="row">
+                <Product name="product 1" price="1000"path="https://rukminim1.flixcart.com/image/660/792/xif0q/shoe/s/o/s/-original-imagg4zhsemgfgth.jpeg?q=50"></Product>
+                <Product name="product 2" price="2000" path="https://rukminim1.flixcart.com/image/660/792/l4ssfww0/shoe/j/g/k/7-rte368-redtape-black-original-imagfm6cjggjssyp.jpeg?q=50"></Product>
+                <Product name="product 3" price="3000"path="https://rukminim1.flixcart.com/image/660/792/xif0q/shoe/l/e/0/-original-imaggckec9ux5m8y.jpeg?q=50"></Product>
+                <Product name="product 4" price="4000"path="https://rukminim1.flixcart.com/image/660/792/xif0q/shoe/3/i/c/-original-imaggckga4zyjqyk.jpeg?q=50"></Product>
+
+
+            </div>
+        </div>
+
+
+
+    )
+    ReactDOM.render(record, document.getElementById("root"))
+</script>
